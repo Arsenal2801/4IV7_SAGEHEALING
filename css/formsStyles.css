@@ -62,7 +62,7 @@ section .contentBx .formBx h2{
     font-weight: 800;
     font-size: 25px;
     margin-bottom: 30px;
-    border-bottom: 4px solid #EE83EF;
+    border-bottom: 3px solid #EE83EF;
     display: inline-block;
 }
 section .contentBx .formBx .inputBx{
@@ -87,13 +87,20 @@ section .contentBx .formBx .inputBx input{
     color: #495057;
     border-radius: 30px;
 }
-section .contentBx .formBx .inputBx button{
+section .contentBx .formBx .inputBx input[type="submit"]{
     margin-top: 30px;
     background-color: #EE83EF;
+    color: #fff;
     outline: none;
     border: none;
     cursor: pointer;
 }
-section .contentBx .formBx .inputBx button a{
-    
+section .contentBx .formBx .inputBx input[type="submit"]:hover{
+    background-color: #EE83EF;
+}
+section .contentBx .formBx .inputBx p{
+    font-size: 13px;
+}
+section .contentBx .formBx .inputBx a{
+    color: #EE83EF;
 }

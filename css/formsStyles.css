@@ -74,42 +74,31 @@ section .contentBx .formBx .inputBx span{
     margin-bottom: 2px;
     display: inline-block;
     color: #495057;
-    font-weight: 300;
+    font-weight: 500;
 }
 section .contentBx .formBx .inputBx input{
     width: 100%;
     padding: 9px 20px;
     outline: none;
     border: 2px solid #495057;
-    box-shadow: #495057;
     font-size: 13px;
     color: #495057;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
 }
-
-
-
-.doble{
+section .contentBx .formBx .doble{
     display: flex;
     justify-content: space-between;
 }
-.doble .inputBx{
+section .contentBx .formBx .doble .inputBx{
     width: 50%;
 }
-.inputBx1{
+section .contentBx .formBx .inputBx1{
     margin-right: 10px;
 }
-.inputBx2{
+section .contentBx .formBx .inputBx2{
     margin-left: 10px;
 }
-
-
-
-
-
-
-
 section .contentBx .formBx .inputBx input[type="submit"]{
     margin-top: 30px;
     height: 40px;
@@ -119,11 +108,9 @@ section .contentBx .formBx .inputBx input[type="submit"]{
     border: none;
     cursor: pointer;
 }
-section .contentBx .formBx .inputBx input[type="submit"]:hover{
-    background-color: #EE83EF;
-}
 section .contentBx .formBx .inputBx p{
     font-size: 13px;
+    font-weight: 500;
 }
 section .contentBx .formBx .inputBx a{
     color: #EE83EF;

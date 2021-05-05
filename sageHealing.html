@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;800&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="./css/generalStyle.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/3fecc3b1d9.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -21,7 +23,7 @@
 
 
     <!-- header -->
-    <header>
+    <header class="header">
         <nav>
             <a href="./sageHealing.html" class="nav_link-active">Sage Healing</a>
             <ul>
@@ -35,7 +37,7 @@
 
 
     <!-- section1 -->
-    <section class="contents1 content_section1">
+    <section class="section1">
         <div class="section1_text">
             <h2>Bienvenido a Sage Healing!!</h2>
             <p>Sage Healing es una aplicación web desarrollada por Voorpret, con el objetivo de mejorar la salud del usuario mediante proycciones, pruebas, dietas y una interfaz muy agradable.</p>
@@ -46,43 +48,59 @@
         </div>
     </section>
 
-    <!-- section2 -->
-    <section class="contents2 content_section2">
-        
-    </section>
 
-    <hr id="hr2">
-        <div class="seccion1">
+    <!-- section2 -->
+    <section  class="section2">
+        <div class="section2_title">
+            <h4>¿Cómo empezar?</h4>
+        </div>
+        <div class="section2_content">
             <div>
-                <img src="datos.jpg" alt="datos">
-                <h3>Datos Personales</h3>
-                <span>Mi nombre es Torres Torres Daeg Yeray, actualmente tengo 17 años, vivo aquí en mi casa, a un lado de mi vecino, estudio el 4° semestre de prepa en el Centro de Estudios Científicos y Tecnológicos N°9 "Juan de Dios Batiz" cursando la carrera de programación.  </span>
-                <br>
-                <a href="datos.html"> Mas Datos <i class="fas fa-angle-double-right"></i></a>
+                <div class="section2_content-img">
+                    <img src="./img/content_proof.png" alt="content_proof">
+                </div>
+                <h6>Resuelve una prueba</h6>
+                <p>Cada domingo sobre tus hábitos alimenticios</p>
             </div>
             <div>
-                <img src="aptitudes.jpg" alt="aptitudes">
-                <h3>Mis Aptitudes</h3>
-                <span>Soy muy bueno liderando y administrando equipos pequeños de entre 3 a 8 personas, en la actual situación, he demostrado que trabajo aun mejor de manera virtual que de manera presencial, pero casi siempre las personas me destacan por mi inusual creatividad. </span>
-                <br>
-                <a href="aptitudes.html"> Mas Aptitudes <i class="fas fa-angle-double-right"></i></a>
+                <div class="section2_content-img">
+                    <img src="./img/content_estadistics.png" alt="content_estadistics">
+                </div>
+                <h6>Obtén tu resultado</h6>
+                <p>Después de la prueba y date cuenta si estas o estarás bien</p>
             </div>
             <div>
-                <img src="metas.jpg" alt="metas">
-                <h3>Mis Metas</h3>
-                <span>Actualmente he estado aprendiendo muchas cosas, que me hacen tener mas metas cada día que pasa, pero creo que la principal de todas ellas, es convertirme en un gran programador y diseñador web, manejando diversos lenguajes pero que entre ellos sobresalga en Python.
-                </span>
-                <br>
-                <a href="metas.html"> Mas Metas <i class="fas fa-angle-double-right"></i></a>
-            </div>
-            <div>
-                <img src="cositas.jpg" alt="cositas">
-                <h3>Mis Gustos</h3>
-                <span>Ase un tiempo, lo que mas me gustaba eran los videojuegos y aquellas cosas como ser youtuber, streamer y esas cosas, quería dedicarme a eso, pero ahora que empiezo a adentrarme al mundo de la programación tengo otra perspectiva acerca de lo que quiero y de lo que me gusta. </span>
-                <br>
-                <a href="gustos.html"> Mas Cositas <i class="fas fa-angle-double-right"></i></a>
+                <div class="section2_content-img">
+                    <img src="./img/content_personFit.png" alt="content_personFit">
+                </div>
+                <h6>Comienza a cuidarte</h6>
+                <p>Con nuestras múltiples dietas, encuentra la adecuada</p>
             </div>
         </div>
+    </section>
 
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_content-logo">
+            <img src="./img/logo-voorpret.png" alt="logo-voorpret">
+        </div>
+        <div class="footer_content-text">
+            <p>Create by Voorpret</p>
+        </div>
+        <div class="footer_content-social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- js efect -->
+    <script src="./js/generalEfect.js"></script>
+
+    
 </body>
 </html>

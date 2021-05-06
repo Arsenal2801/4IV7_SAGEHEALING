@@ -11,7 +11,7 @@ body{
 
 
 
-/* NAV */
+/* nav */
 header{
     position: relative;
     width: 100%;
@@ -60,8 +60,8 @@ nav a:hover{
 
 
 
-/* SECTION1 */
-.section1{
+/* sectionA */
+.sectionA{
     position: relative;
     padding: 0 130px 0 130px;
     display: flex;
@@ -69,20 +69,20 @@ nav a:hover{
     height: 90vh;
     align-items: center;
 }
-/* section1_text */
-.section1 .section1_text{
+/* sectionA_text */
+.sectionA .sectionA_text{
     position: relative;
 }
-.section1 .section1_text h2{
+.sectionA .sectionA_text h2{
     font-size: 65px;
     max-width: 550px;
 }
-.section1 .section1_text p{
+.sectionA .sectionA_text p{
     font-size: 17px;
     margin: 30px 0 40px 0;
     max-width: 800px;
 }
-.section1 .section1_text a{
+.sectionA .sectionA_text a{
     display: inline-block;
     padding: 12px 28px;
     background-color: #EE83EF;
@@ -93,60 +93,61 @@ nav a:hover{
     text-decoration: none;
     transition: s;
 }
-.section1 .section1_text a:hover{
+.sectionA .sectionA_text a:hover{
     transition: 0.5s;
     background-color: #41DFD0;
 }
-/* section1_img */
-.section1 .section1_img{
+/* sectionA_img */
+.sectionA .sectionA_img{
     display: flex;
     width: 100%;
     height: 100%;
     align-items: center;
     justify-content: flex-end;
 }
-.section1 .section1_img img{
+.sectionA .sectionA_img img{
     width: 470px;
 }
 
 
 
-/* SECTION2 */
-.section2{
+
+/* sectionB */
+.sectionB{
     position: relative;
     padding: 0 130px 0 130px;
     width: 100%;
     height: 85vh;
 }
-/* section2_title */
-.section2 .section2_title{
+/* sectionB_title */
+.sectionB .sectionB_title{
     margin: 0 0 60px 0;
 }
-.section2 .section2_title h4{
+.sectionB .sectionB_title h4{
     text-align: center;
     font-size: 35px;
 }
-/* section2_content */
-.section2 .section2_content{
+/* sectionB_content */
+.sectionB .sectionB_content{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
-.section2 .section2_content .section2_content-img{
+.sectionB .sectionB_content .sectionB_content-img{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
 }
-.section2 .section2_content img{
+.sectionB .sectionB_content img{
     width: 250px;
 }
-.section2 .section2_content h6{
+.sectionB .sectionB_content h6{
     font-size: 20px;
     text-align: center;
 }
-.section2 .section2_content p{
+.sectionB .sectionB_content p{
     font-size: 17px;
     text-align: center;
     padding: 0 25px;
@@ -154,11 +155,11 @@ nav a:hover{
 
 
 
-/* FOOTER */
+/* footer */
 footer{
     background: #3E3E3E;
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     padding: 0 130px 0 130px;
     display: flex;
     justify-content: space-between;

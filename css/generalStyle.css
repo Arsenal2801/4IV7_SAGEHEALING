@@ -50,7 +50,6 @@ nav a:hover{
     background-color: #41DFD0;
     color: #fff;
     border-radius: 30px;
-    transition: 0.5s;
 }
 .nav_link-active{
     background-color: #41DFD0;
@@ -91,10 +90,8 @@ nav a:hover{
     font-weight: 500;
     border-radius: 30px;
     text-decoration: none;
-    transition: s;
 }
 .sectionA .sectionA_text a:hover{
-    transition: 0.5s;
     background-color: #41DFD0;
 }
 /* sectionA_img */
@@ -108,7 +105,6 @@ nav a:hover{
 .sectionA .sectionA_img img{
     width: 470px;
 }
-
 
 
 

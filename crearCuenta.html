@@ -38,12 +38,12 @@
                         <!-- Nombre de usuario -->
                         <div class="inputBx inputBx1">
                             <span>Nombre de usuario</span>
-                            <input type="text" placeholder="algo"       id="nombre">
+                            <input type="text" placeholder="algo" id="nombre">
                         </div>
                         <!-- Edad -->
                         <div class="inputBx inputBx2">
                             <span>Edad</span>
-                            <input type="text" placeholder="20 - 40"    id="edad">
+                            <input type="number" placeholder="20 - 40" min="20" max="40" id="edad">
                         </div>
                     </div>
 
@@ -56,12 +56,12 @@
                     <!-- Contraseña -->
                     <div class="inputBx">
                         <span>Contraseña</span>
-                        <input type="password" placeholder="••••••••"   id="cont">
+                        <input type="password" placeholder="••••••••" id="cont">
                     </div>
 
                     <!-- Registrarse -->
                     <div class="inputBx">
-                        <input type="submit" value="Registrarse" onclick="vacio()">
+                        <input type="submit" value="Registrarse" onclick="validar()">
                     </div>
 
                     <!-- Iniciar sesion -->

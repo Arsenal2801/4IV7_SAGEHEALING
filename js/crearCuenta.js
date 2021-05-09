@@ -1,9 +1,10 @@
 // JS crear cuenta
 
 function validar(){
-    // vacio();
-    // primero();
+    vacio();
+    primero();
     correo();
+    pass();
 }
 
 // Variables para la validación
@@ -37,13 +38,13 @@ function primero(){
 
         }else{
             console.log('hay un problema en el campo edad');
-            alert('Por favor, complete correctamente el campo edad');
+            alert('Por favor, ingrese únicamente números en el campo edad');
             document.getElementById('edad').focus();
             event.preventDefault()
         }
     }else{
         console.log('hay un problema en el campo nombre');
-        alert('Por favor, complete correctamente el campo nombre')
+        alert('Por favor, ingrese letras sin acento en el campo nombre')
         document.getElementById('nombre').focus();
         event.preventDefault();
     }
@@ -61,3 +62,21 @@ function correo(correo = document.getElementById('correo').value){
     }
 }
 
+// validación contraseña ʕ； •`ᴥ•´ʔ
+function pass(){
+    if(document.getElementById('cont').value.length > 9 && document.getElementById('cont').value.length < 30){
+        if(document.getElementById('cont').value.match(letras) && document.getElementById('cont').value.match(num)){
+            console.log('el campo contraseña está bien');
+        }else{
+            console.log('el campo contraseña no tiene numeros y letras');
+            alert('Por favor, ingrese letras sin acento y números en el campo contraseña');
+            document.getElementById('cont').focus();
+            event.preventDefault();
+        }
+    }else{
+        console.log('hay un problema en el campo contraseña');
+        alert('Por favor, ingrese más de diez caracteres y menos de 30 en el campo contraseña');
+        document.getElementById('correo').focus();
+        event.preventDefault();
+    }
+}

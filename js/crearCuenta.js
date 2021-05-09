@@ -1,8 +1,8 @@
 // JS crear cuenta
 
 function validar(){
-    vacio();
-    primero();
+    // vacio();
+    // primero();
     correo();
 }
 
@@ -18,8 +18,8 @@ function vacio(){
         alert('Por favor, complete todos los espacios');
         event.preventDefault()
     }else{
-            console.log('todos los espacios contienen caracteres');
-            event.preventDefault();
+        console.log('todos los espacios contienen caracteres');
+        event.preventDefault()
         }
 }
 
@@ -39,14 +39,25 @@ function primero(){
             console.log('hay un problema en el campo edad');
             alert('Por favor, complete correctamente el campo edad');
             document.getElementById('edad').focus();
+            event.preventDefault()
         }
     }else{
         console.log('hay un problema en el campo nombre');
         alert('Por favor, complete correctamente el campo nombre')
         document.getElementById('nombre').focus();
+        event.preventDefault();
     }
 }
 
-function correo(){
-
+// validación del campo correo
+function correo(correo = document.getElementById('correo').value){
+    if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(correo)){
+        console.log('el campo correo está bien');
+    }else{
+        console.log('hay un problema en el campo correo');
+        alert('Por favor, complete correctamente el campo correo');
+        document.getElementById('correo').focus();
+        event.preventDefault();
+    }
 }
+

@@ -2,7 +2,13 @@
 
 function validar(){
     vacio();
+    primero();
+    correo();
 }
+
+// Variables para la validación
+var letras = /^[A-Za-zÑñ]+$/;
+var num = /^[0-9]+$/;
 
 // Se completan todos los espacios
 function vacio(){
@@ -17,3 +23,30 @@ function vacio(){
         }
 }
 
+// Validación de los campos Nombre y Edad
+function primero(){
+
+    // validación de nombre
+    if(document.getElementById('nombre').value.match(letras)){
+        console.log('el campo nombre está bien');
+
+        // validación de edad
+        if(document.getElementById('edad').value.match(num) && document.getElementById('edad').value >= 20 
+            && document.getElementById('edad').value <= 40){
+                console.log('el campo edad está bien');
+
+        }else{
+            console.log('hay un problema en el campo edad');
+            alert('Por favor, complete correctamente el campo edad');
+            document.getElementById('edad').focus();
+        }
+    }else{
+        console.log('hay un problema en el campo nombre');
+        alert('Por favor, complete correctamente el campo nombre')
+        document.getElementById('nombre').focus();
+    }
+}
+
+function correo(){
+
+}

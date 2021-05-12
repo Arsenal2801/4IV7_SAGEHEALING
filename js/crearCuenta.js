@@ -2,68 +2,53 @@
 
 function validar(){
 
-    // Se completan los espacios
-    vacio();
-
-    // Validaciones de nombre y edad
-    largo_primero();
+    // Validacion de nombre
     primero();
 
-    // Validaciones del correo
-    largo_segundo();
+    // Validación de edad
     segundo();
 
-    // Validacion de la contraseña
+    // Validacion del correo
     tercero();
+
+    // Validacion de la contraseña
+    cuarto();
+
 }
 
 // Variables para la validación
-var letras = /^[A-Za-z]+$/;
+var letras = /^[a-zA-Z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+$/;
 var num = /^[0-9]+$/;
 
-// Se completan todos los espacios
-function vacio(){
-    if(document.querySelector('#nombre').value.trim()=="" || document.querySelector('#correo').value.trim()=="" ||
-        document.querySelector('#cont').value.trim()=="" || document.querySelector('#edad').value.trim()==""){
-        console.log('hay espacios vacíos en crear cuenta');
-        alert('Por favor, complete todos los espacios');
-        event.preventDefault()
-    }else{
-        console.log('todos los espacios contienen caracteres');
-        event.preventDefault()
-        }
-}
 
-// No se ingresan caracteres de más en nombre o edad (´･(∞)･｀)
-function largo_primero(){
+// Validación del campo Nombre
+function primero(){
+    // No se ingresan caracteres de más en nombre o edad (´･(∞)･｀)
+    if(document.getElementById('nombre').value.length >= 4 && document.getElementById('nombre').value.length <= 15){
 
-    // largo nombre
-    if(document.getElementById('nombre').value.length <= 4 && document.getElementById('nombre').value.length >= 10){
-        console.log('la longitud de nombre está bien')
+        if(document.getElementById('nombre').value.match(letras)){
+            console.log('el campo nombre está bien');
 
-        // largo edad
-        if (document.getElementById('edad').value.length == 2 ){
-            console.log('la longitud de edad está bien')
         }else{
-            console.log('la longitud del campo edad está mal');
-            alert('Por favor, ingrese únicamente dos numeros en el campo edad');
-            document.getElementById('edad').focus();
+            console.log('hay un problema en el campo nombre');
+            alert('Por favor, ingrese letras sin acento en el campo nombre')
+            document.getElementById('nombre').focus();
+            document.getElementById('nombre').style.backgroundColor = "#ef83cb50";
             event.preventDefault();
         }
     }else{
-        console.log('la longitud del campo nombre está mal');
+        console.log('la longitud del campo nombre está mal', document.getElementById('nombre').value.length);
         alert('Por favor, ingrese entre cuatro y diez caracteres en el campo nombre');
         document.getElementById('nombre').focus();
+        document.getElementById('nombre').style.backgroundColor = "#ef83cb50";
         event.preventDefault();
     }
 }
 
-// Validación de los campos Nombre y Edad
-function primero(){
-
-    // validación de nombre
-    if(document.getElementById('nombre').value.match(letras)){
-        console.log('el campo nombre está bien');
+// Validación del campo Edad
+function segundo(){
+    if(document.getElementById('edad').value.length == 2 ){
+        console.log('la longitud de edad está bien')
 
         // validación de edad
         if(document.getElementById('edad').value.match(num) && document.getElementById('edad').value >= 20 
@@ -74,41 +59,43 @@ function primero(){
             console.log('hay un problema en el campo edad');
             alert('Por favor, ingrese únicamente números en el campo edad');
             document.getElementById('edad').focus();
+            document.getElementById('edad').style.backgroundColor = "#ef83cb50";
             event.preventDefault()
         }
+
     }else{
-        console.log('hay un problema en el campo nombre');
-        alert('Por favor, ingrese letras sin acento en el campo nombre')
-        document.getElementById('nombre').focus();
+        console.log('la longitud del campo edad está mal');
+        alert('Por favor, ingrese únicamente dos numeros en el campo edad');
+        document.getElementById('edad').focus();
+        document.getElementById('edad').style.backgroundColor = "#ef83cb50";
         event.preventDefault();
     }
 }
 
-// validación del campo correo
-function largo_segundo(){
-    if(document.getElementById('correo').value.length >= 50){
+// Validación del correo
+function tercero(correo = document.getElementById('correo').value){
+    if(document.getElementById('correo').value.length <= 35){
         console.log('la longitud del correo está bien')
+        if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(correo)){
+            console.log('el campo correo está bien');
+        }else{
+            console.log('hay un problema en el campo correo');
+            alert('Por favor, complete correctamente el campo correo');
+            document.getElementById('correo').focus();
+            document.getElementById('correo').style.backgroundColor = "#ef83cb50";
+            event.preventDefault();
+        }
     }else{
         console.log('el largo del correo está mal');
-        alert('Por favor, ingrese menos de 50 caracteres en el campo correo');
+        alert('Por favor, ingrese menos de 36 caracteres en el campo correo');
         document.getElementById('correo').focus();
-        event.preventDefault();
-    }
-}
-
-function segundo(correo = document.getElementById('correo').value){
-    if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(correo)){
-        console.log('el campo correo está bien');
-    }else{
-        console.log('hay un problema en el campo correo');
-        alert('Por favor, complete correctamente el campo correo');
-        document.getElementById('correo').focus();
+        document.getElementById('correo').style.backgroundColor = "#ef83cb50";
         event.preventDefault();
     }
 }
 
 // validación contraseña ʕ； •`ᴥ•´ʔ
-function tercero(){
+function cuarto(){
     if(document.getElementById('cont').value.length > 9 && document.getElementById('cont').value.length < 30){
         if(document.getElementById('cont').value.match(letras) && document.getElementById('cont').value.match(num)){
             console.log('el campo contraseña está bien');
@@ -116,12 +103,14 @@ function tercero(){
             console.log('el campo contraseña no tiene numeros y letras');
             alert('Por favor, ingrese letras sin acento y números en el campo contraseña');
             document.getElementById('cont').focus();
+            document.getElementById('cont').style.backgroundColor = "#ef83cb50";
             event.preventDefault();
         }
     }else{
-        console.log('hay un problema en el campo contraseña');
+        console.log('el largo de la contraseña está mal');
         alert('Por favor, ingrese más de diez caracteres y menos de 30 en el campo contraseña');
-        document.getElementById('correo').focus();
+        document.getElementById('cont').focus();
+        document.getElementById('cont').style.backgroundColor = "#ef83cb50";
         event.preventDefault();
     }
 }

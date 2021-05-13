@@ -20,6 +20,18 @@ function validar(){
 var letras = /^[a-zA-Z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+$/;
 var num = /^[0-9]+$/;
 
+function addElement () {
+    // crea un nuevo div
+    // y añade contenido
+    var newDiv = document.createElement("div");
+    var newContent = document.createTextNode("Hola!¿Qué tal?");
+    newDiv.appendChild(newContent); //añade texto al div creado.
+    console.log('estoy leyendo -3-')
+  
+    // añade el elemento creado y su contenido al DOM
+    var currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv);
+}
 
 // Validación del campo Nombre
 function primero(){
@@ -43,6 +55,9 @@ function primero(){
         alert('Por favor, ingrese entre cuatro y diez caracteres en el campo nombre');
         document.getElementById('nombre').focus();
         document.getElementById('nombre').style.backgroundColor = "#ef83cb50";
+        
+        addElement();
+
         event.preventDefault();
     }
 }
@@ -102,7 +117,7 @@ function tercero(correo = document.getElementById('correo').value){
 // validación contraseña ʕ； •`ᴥ•´ʔ
 function cuarto(){
     if(document.getElementById('cont').value.length > 9 && document.getElementById('cont').value.length < 30){
-        if(document.getElementById('cont').value.match(letras) && document.getElementById('cont').value.match(num)){
+        if(document.getElementById('cont').value.match(letras) || document.getElementById('cont').value.match(num)){
             console.log('el campo contraseña está bien');
             document.getElementById('cont').style.backgroundColor = "#fff";
         }else{

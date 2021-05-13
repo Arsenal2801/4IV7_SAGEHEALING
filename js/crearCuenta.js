@@ -25,11 +25,11 @@ var num = /^[0-9]+$/;
 function primero(){
     // No se ingresan caracteres de más en nombre o edad (´･(∞)･｀)
     if(document.getElementById('nombre').value.length >= 4 && document.getElementById('nombre').value.length <= 15){
-        document.getElementById('cont').style.backgroundColor = "#fff";
+        document.getElementById('nombre').style.backgroundColor = "#fff";
 
         if(document.getElementById('nombre').value.match(letras)){
             console.log('el campo nombre está bien');
-            document.getElementById('cont').style.backgroundColor = "#fff";
+            document.getElementById('nombre').style.backgroundColor = "#fff";
 
         }else{
             console.log('hay un problema en el campo nombre');
@@ -51,13 +51,13 @@ function primero(){
 function segundo(){
     if(document.getElementById('edad').value.length == 2 ){
         console.log('la longitud de edad está bien')
-        document.getElementById('cont').style.backgroundColor = "#fff";
+        document.getElementById('edad').style.backgroundColor = "#fff";
 
         // validación de edad
         if(document.getElementById('edad').value.match(num) && document.getElementById('edad').value >= 20 
             && document.getElementById('edad').value <= 40){
                 console.log('el campo edad está bien');
-                document.getElementById('cont').style.backgroundColor = "#fff";
+                document.getElementById('edad').style.backgroundColor = "#fff";
 
         }else{
             console.log('hay un problema en el campo edad');
@@ -82,7 +82,7 @@ function tercero(correo = document.getElementById('correo').value){
         console.log('la longitud del correo está bien')
         if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(correo)){
             console.log('el campo correo está bien');
-            document.getElementById('cont').style.backgroundColor = "#fff";
+            document.getElementById('correo').style.backgroundColor = "#fff";
         }else{
             console.log('hay un problema en el campo correo');
             alert('Por favor, complete correctamente el campo correo');

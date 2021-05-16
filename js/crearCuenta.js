@@ -29,7 +29,7 @@ function addElement () {
     console.log('estoy leyendo -3-')
   
     // añade el elemento creado y su contenido al DOM
-    var currentDiv = document.getElementById("div1");
+    var currentDiv = document.getElementById("nombre");
     document.body.insertBefore(newDiv, currentDiv);
 }
 
@@ -56,7 +56,7 @@ function primero(){
         document.getElementById('nombre').focus();
         document.getElementById('nombre').style.backgroundColor = "#ef83cb50";
         
-        addElement();
+        // addElement();
 
         event.preventDefault();
     }

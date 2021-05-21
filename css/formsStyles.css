@@ -112,6 +112,10 @@ section .contentBx .formBx .inputBx p{
     font-size: 13px;
     font-weight: 500;
 }
+section .contentBx .formBx .inputBx .warningParraf{
+    font-size: 9px;
+    margin-top: 4px;
+}
 section .contentBx .formBx .inputBx a{
     color: #EE83EF;
 }

@@ -32,18 +32,20 @@
             <div class="formBx">
 
                 <h2>Iniciar sesion</h2>
-                <form action="./miPerfil.html">
+                <form action="./miPerfil.html" id="form">
 
                     <!-- Correo -->
                     <div class="inputBx">
                         <span>Correo</span>
-                        <input type="text" placeholder="algo@algo.algo">
+                        <input type="text" placeholder="algo@algo.algo" id="correo">
+                        <p id="warningCorreo" class="warningParraf"></p>
                     </div>
 
                     <!-- Contraseña -->
                     <div class="inputBx">
                         <span>Contraseña</span>
-                        <input type="password" placeholder="••••••••">
+                        <input type="password" placeholder="••••••••" id="contraseña">
+                        <p id="warningContraseña" class="warningParraf"></p>
                     </div>
 
                     <!-- Iniciar sesion -->
@@ -51,7 +53,7 @@
                         <input type="submit" value="Iniciar sesion">
                     </div>
 
-                    <!-- Iniciar sesion -->
+                    <!-- Registrate -->
                     <div class="inputBx">
                         <p> ¿No tienes una cuenta? <a href="./crearCuenta.html">Registrate</a></p>
                     </div>
@@ -61,6 +63,10 @@
             </div>
         </div>
     </section>
+
+
+    <!-- script -->
+    <script src="./js/iniciarSesion.js"></script>
 
 
 </body>

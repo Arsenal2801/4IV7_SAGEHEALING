@@ -32,18 +32,20 @@
             <div class="formBx">
 
                 <h2>Modificar datos</h2>
-                <form action="./miPerfil.html">
+                <form action="./miPerfil.html" id="form">
 
                     <div class="doble">
                         <!-- Nombre de usuario -->
                         <div class="inputBx inputBx1">
                             <span>Nombre de usuario</span>
-                            <input type="text" placeholder="algo">
+                            <input type="text" placeholder="algo" id="nombre">
+                            <p id="warningNombre" class="warningParraf"></p>
                         </div>
                         <!-- Edad -->
                         <div class="inputBx inputBx2">
                             <span>Edad</span>
-                            <input type="text" placeholder="20 - 40">
+                            <input type="text" placeholder="20 - 40" id="edadd">
+                            <p id="warningEdadd" class="warningParraf"></p>
                         </div>
                     </div>
 
@@ -51,33 +53,37 @@
                         <!-- Altura -->
                         <div class="inputBx inputBx1">
                             <span>Altura</span>
-                            <input type="text" placeholder="1 - 2 metros">
+                            <input type="text" placeholder="1 - 2.5 metros" id="altura">
+                            <p id="warningAltura" class="warningParraf"></p>
                         </div>
                         <!-- Peso -->
                         <div class="inputBx inputBx2">
                             <span>Peso</span>
-                            <input type="text" placeholder="40 - 100 kg">
+                            <input type="text" placeholder="40 - 100 kg" id="peso">
+                            <p id="warningPeso" class="warningParraf"></p>
                         </div>
                     </div>
 
                     <!-- Correo -->
                     <div class="inputBx">
                         <span>Correo</span>
-                        <input type="text" placeholder="algo@algo.algo">
+                        <input type="text" placeholder="algo@algo.algo" id="correo">
+                        <p id="warningCorreo" class="warningParraf"></p>
                     </div>
 
                     <!-- Contraseña -->
                     <div class="inputBx">
                         <span>Contraseña</span>
-                        <input type="password" placeholder="••••••••">
+                        <input type="password" placeholder="••••••••" id="contraseña">
+                        <p id="warningContraseña" class="warningParraf"></p>
                     </div>
 
-                    <!-- Registrarse -->
+                    <!-- Guardar -->
                     <div class="inputBx">
                         <input type="submit" value="Guardar">
                     </div>
 
-                    <!-- Iniciar sesion -->
+                    <!-- Cancelar -->
                     <div class="inputBx">
                         <p> ¿No quieres modificar datos? <a href="./miPerfil.html">Cancelar</a></p>
                     </div>
@@ -87,6 +93,10 @@
             </div>
         </div>
     </section>
+
+
+    <!-- script -->
+    <script src="./js/modificarPerfil.js"></script>
 
 
 </body>

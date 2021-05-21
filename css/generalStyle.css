@@ -427,6 +427,96 @@ nav a:hover{
 
 
 
+/* sectionH */
+.sectionH{
+    position: relative;
+    width: 100%;
+}
+.sectionH .sectionH_contP{
+    overflow: hidden;
+    margin: auto;
+    padding: 0px 100px 100px 100px;
+    padding-left: 170px;
+        /* top right bottom left */
+}
+.sectionH .sectionH_input{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sectionH .sectionH_input input[type="radio"]{
+    display: none;
+}
+    .sectionH .sectionH_contP .sectionH_input label{   
+        color: #fff;
+        background-color: #41DFD0;
+        padding: 6px 17px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 15px;
+        transition:0.2s;
+    }
+        .sectionH .sectionH_contP .sectionH_input label:hover{   
+            background-color: #EE83EF;
+        }
+            .sectionH .sectionH_input input[type="radio"]:checked + label{
+                background-color:#EE83EF;
+            }
+
+/* sectionH_text */
+.sectionH .sectionH_text{
+    position: relative;
+}
+.sectionH .sectionH_text h3{
+    font-size: 2vw;
+}
+.sectionH .sectionH_text h5{
+    font-size: 1.2vw;
+}
+.sectionH .sectionH_text p{
+    font-size: 15xp;
+    margin: 30px 0 40px 0;
+    max-width: 800px;
+}
+.sectionH .sectionH_text a{
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #EE83EF;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.sectionH .sectionH_text .sectionH_submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sectionH .sectionH_text .sectionH_submit input[type="submit"]{
+    font-family: 'Poppins', sans-serif;
+    background-color: #EE83EF;
+    color: #fff;
+    font-size: 1.2vw;
+    padding: 8px 40px;
+    border-radius: 25px;
+    border:none;
+    cursor: pointer;
+    transition:0.2s;
+    position: center;
+}
+.sectionH .sectionH_text .sectionH_submit img{
+    width: 15%;
+    height: auto;
+    padding:0 30px 0 30px;
+}
+.sectionH .sectionH_text a:hover{
+    background-color: #41DFD0;
+}
+
+
+
 /* footer */
 footer{
     background: #3E3E3E;

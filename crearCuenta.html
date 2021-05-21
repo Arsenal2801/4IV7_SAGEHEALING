@@ -32,31 +32,35 @@
             <div class="formBx">
 
                 <h2>Crear cuenta</h2>
-                <form action="./sageHealing.html">
+                <form action="./sageHealing.html" id="form">
 
                     <div class="doble">
                         <!-- Nombre de usuario -->
                         <div class="inputBx inputBx1">
                             <span>Nombre de usuario</span>
-                            <input type="text" placeholder="algo">
+                            <input type="text" placeholder="algo" id="nombre">
+                            <p id="warningNombre" class="warningParraf"></p>
                         </div>
                         <!-- Edad -->
                         <div class="inputBx inputBx2">
                             <span>Edad</span>
-                            <input type="text" placeholder="20 - 40">
+                            <input type="text" placeholder="20 - 40" id="edadd">
+                            <p id="warningEdadd" class="warningParraf"></p>
                         </div>
                     </div>
 
                     <!-- Correo -->
                     <div class="inputBx">
                         <span>Correo</span>
-                        <input type="text" placeholder="algo@algo.algo">
+                        <input type="text" placeholder="algo@algo.algo" id="correo">
+                        <p id="warningCorreo" class="warningParraf"></p>
                     </div>
 
                     <!-- Contraseña -->
                     <div class="inputBx">
                         <span>Contraseña</span>
-                        <input type="password" placeholder="••••••••">
+                        <input type="password" placeholder="••••••••" id="contraseña">
+                        <p id="warningContraseña" class="warningParraf"></p>
                     </div>
 
                     <!-- Registrarse -->
@@ -66,7 +70,7 @@
 
                     <!-- Iniciar sesion -->
                     <div class="inputBx">
-                        <p> ¿Ya tienes una cuenta? <a href="./iniciarSesion.html">Inicia sesión</a></p>
+                        <p> ¿Ya tienes una cuenta? <a href="./iniciarSesion">Inicia sesión</a></p>
                     </div>
 
                 </form>
@@ -74,6 +78,10 @@
             </div>
         </div>
     </section>
+
+
+    <!-- script -->
+    <script src="./js/crearCuenta.js"></script>
 
 
 </body>
